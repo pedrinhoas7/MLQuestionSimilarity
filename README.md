@@ -18,7 +18,7 @@
 
 Antes de rodar o projeto, garanta que os seguintes componentes estejam instalados:
 
-- [.NET 6.0 ou superior](https://dotnet.microsoft.com/download/dotnet) ⚡
+- [.NET 8](https://dotnet.microsoft.com/download/dotnet) ⚡
 - [RabbitMQ](https://www.rabbitmq.com/download.html) 🐰
 - [ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet) 🧠
 
