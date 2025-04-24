@@ -169,7 +169,8 @@ Exemplo de uma mensagem enviada para a fila para processamento:
 
 Exemplo de como os dados são visualizados atualmente, futuramente eles poderão ser registrados ou encaminhados para uso:
 
-![image](https://github.com/user-attachments/assets/02534977-bea9-4fca-8842-4b3dd747aebc)
+![image](https://github.com/user-attachments/assets/d765547d-e4d3-43eb-9a91-69cf793410fb)
+
 
 ---
 
