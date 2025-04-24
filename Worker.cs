@@ -1,24 +1,36 @@
+using MLQuestionSimilarity.Services;
+
 namespace MLQuestionSimilarity
 {
     public class Worker : BackgroundService
     {
-        private readonly ILogger<Worker> _logger;
+        private readonly MessagingService _messagingService;
+        private readonly SimilarityService _similarityService;
 
-        public Worker(ILogger<Worker> logger)
+        public Worker()
         {
-            _logger = logger;
+            _messagingService = new MessagingService();
+            _similarityService = new SimilarityService();
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            while (!stoppingToken.IsCancellationRequested)
+            await _messagingService.StartConsuming(async (input) =>
             {
-                if (_logger.IsEnabled(LogLevel.Information))
+                Console.WriteLine("Target: " + input.TargetQuestions.Description);
+
+                foreach (var q in input.AllQuestions)
                 {
-                    _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+                    var similarity = await _similarityService.CalculateCosineSimilarityAsync(input.TargetQuestions, q);
+                    Console.WriteLine($"Similaridade com \"{q.Description}\": {similarity.Score:F2}");
                 }
-                await Task.Delay(1000, stoppingToken);
-            }
+            }, stoppingToken);
+        }
+
+        public override async Task StopAsync(CancellationToken cancellationToken)
+        {
+            await _messagingService.StopAsync();
+            await base.StopAsync(cancellationToken);
         }
     }
 }
