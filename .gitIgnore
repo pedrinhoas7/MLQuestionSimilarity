@@ -1,0 +1,60 @@
+# .NET
+bin/
+obj/
+
+# Rider/Visual Studio
+.idea/
+.vs/
+.vscode/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Microsoft Visual Studio for Mac
+.vscode/
+.vscode-test/
+
+# ASP.NET Scaffolding
+Scaffolding/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# RabbitMQ
+.rabbitmq/
+
+# ML.NET model files (optional, adjust based on your usage)
+*.zip
+*.h5
+*.pkl
+
+# Logs
+logs/
+*.log
+
+# Build results
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.app
+*.apk
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# NPM
+node_modules/
+npm-debug.log
+
+# Publish folder
+publish/
+
+# Temp files
+*.tmp
