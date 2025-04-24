@@ -160,9 +160,14 @@ Exemplo de uma mensagem enviada para a fila para processamento:
     {
       "Id": "Q5",
       "Description": "Qual é a capital do Brasil?."
+    },
+    {
+      "Id": "Q6",
+      "Description": "Qual é a capital do Brasil?"
     }
   ]
 }
+
 ```
 
 ## Exemplo de Resposta 📥
