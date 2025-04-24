@@ -1,4 +1,4 @@
-# 🤖 MLQuestionSimilarity 🚀
+# 🤖 MLQuestionSimilarity
 
 `MLQuestionSimilarity` é um serviço baseado em **Machine Learning** que calcula a similaridade entre uma questão alvo e uma lista de outras questões. Ele utiliza o algoritmo de **Similaridade de Cosseno** para comparar descrições de texto e determinar o quão semelhantes elas são. O projeto é desenvolvido usando **ML.NET** e integra-se com **RabbitMQ** para mensageria, permitindo um processamento eficiente em segundo plano.
 
